@@ -12,15 +12,18 @@ function convertToObject(sourceString) {
   for (const c of vetSplited) {
     let c2;
 
-    if (c !==  undefined && c !== '') {
+    if (c !== '') {
       c2 = c.trim();
     }
 
-    if (c2 !== undefined && c2 !== '') {
+    if (c2 !== '') {
       let registerSplited = c2.split(':');
-      const key = registerSplited[0].trim();
-      const value = registerSplited[1].trim();
-      Object.assign(result, {[key]:value});
+
+      if (registerSplited[0] === 'object' && registerSplited[1] === 'object') {
+        const key = registerSplited[0].trim();
+        const value = registerSplited[1].trim();
+        Object.assign(result, {[key]:value});
+      }
     }
   }
 
