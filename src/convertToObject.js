@@ -12,12 +12,12 @@ function convertToObject(sourceString) {
   for (const c of vetSplited) {
     let c2;
 
-    if (c !==  undefined && c!== '') {
+    if (c !==  undefined && c !== '') {
       c2 = c.trim();
     }
 
     if (c2 !== '') {
-      let registerSplited = c.split(':');
+      let registerSplited = c2.split(':');
       const key = registerSplited[0].trim();
       const value = registerSplited[1].trim();
       Object.assign(result, {[key]:value});
