@@ -22,7 +22,10 @@ function convertToObject(sourceString) {
       if (typeof registerSplited[0] === 'string' && typeof registerSplited[1] === 'string') {
         const key = registerSplited[0].trim();
         const value = registerSplited[1].trim();
-        Object.assign(result, {[key]:value});
+
+        if (key !== '' && value !== '') {
+          Object.assign(result, {[key]:value});
+        }
       }
     }
   }
