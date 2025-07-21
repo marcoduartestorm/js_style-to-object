@@ -16,7 +16,7 @@ function convertToObject(sourceString) {
       c2 = c.trim();
     }
 
-    if (c2 !== '') {
+    if (c2 !== undefined && c2 !== '') {
       let registerSplited = c2.split(':');
 
       if (typeof registerSplited[0] === 'string' && typeof registerSplited[1] === 'string') {
