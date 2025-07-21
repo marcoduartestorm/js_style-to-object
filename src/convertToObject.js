@@ -7,12 +7,12 @@
  */
 function convertToObject(sourceString) {
   let vetSplited = sourceString.split(';')
-  const obj = {};
+  const resiult = {};
 
   for (const c of vetSplited) {
     let c2;
 
-    if (c !==  undefined) {
+    if (c !==  undefined && c!== '') {
       c2 = c.trim();
     }
 
@@ -20,11 +20,11 @@ function convertToObject(sourceString) {
       let registerSplited = c.split(':');
       const key = registerSplited[0].trim();
       const value = registerSplited[1].trim();
-      Object.assign(obj, {[key]:value});
+      Object.assign(result, {[key]:value});
     }
   }
 
-  return obj;
+  return result;
 }
 
 module.exports = convertToObject;
