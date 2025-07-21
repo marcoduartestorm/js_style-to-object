@@ -19,7 +19,7 @@ function convertToObject(sourceString) {
     if (c2 !== '') {
       let registerSplited = c2.split(':');
 
-      if (registerSplited[0] === 'object' && registerSplited[1] === 'object') {
+      if (typeof registerSplited[0] === 'string' && typeof registerSplited[1] === 'string') {
         const key = registerSplited[0].trim();
         const value = registerSplited[1].trim();
         Object.assign(result, {[key]:value});
