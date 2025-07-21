@@ -12,7 +12,7 @@ function convertToObject(sourceString) {
   for (const c of vetSplited) {
     let c2;
 
-    if (c !== '') {
+    if (c !== undefined && c !== '') {
       c2 = c.trim();
     }
 
