@@ -7,7 +7,7 @@
  */
 function convertToObject(sourceString) {
   let vetSplited = sourceString.split(';')
-  const resiult = {};
+  const result = {};
 
   for (const c of vetSplited) {
     let c2;
